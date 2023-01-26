@@ -18,7 +18,7 @@ public class BasePage {
 
     public WebDriverWait getWait7() {
         if (wait7 == null) {
-            wait7 = new WebDriverWait(driver, Duration.ofSeconds(5));
+            wait7 = new WebDriverWait(driver, Duration.ofSeconds(7));
         }
 
         return wait7;

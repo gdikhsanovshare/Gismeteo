@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -21,6 +22,7 @@ public class GismeteoMainPage extends BasePage {
         super(driver);
     }
 
+    @Step
     public GismeteoMainPage inputTextToSearchField(String city) {
 
         switchToAnotherWindow();
@@ -35,7 +37,8 @@ public class GismeteoMainPage extends BasePage {
         return this;
     }
 
-    public GismeteoExactCityPage findCityByExactTextInDropdownAndClick(String city) throws InterruptedException {
+    @Step
+    public GismeteoExactCityPage findCityByExactTextInDropdownAndClick(String city) {
         WebElement result = null;
         for (WebElement element : searchCityResultList) {
             if (element.getText().equalsIgnoreCase(city)) {

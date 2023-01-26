@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,6 +15,7 @@ public class GismeteoExactCityPage extends BasePage {
         super(driver);
     }
 
+    @Step
     public String getCurrentCityTitle() {
         return getWait7().until(ExpectedConditions.visibilityOf(getCurrentCityH1Text)).getText();
     }
